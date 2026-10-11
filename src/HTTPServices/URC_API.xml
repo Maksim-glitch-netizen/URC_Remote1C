@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<HTTPService uuid="0970baf5-996a-46cb-b853-97aef7bfab6b">
+		<Properties>
+			<Name>URC_API</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Remote1C API v1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remote1C API v1</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>remote1c</RootURL>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="f5eaff0a-83c7-4d75-a251-2edae91a5435">
+				<Properties>
+					<Name>Ping</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ping</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/ping</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9f1bfd3f-e942-449f-848f-9d249cd0738b">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>PingGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="47508e65-117f-46e9-bdca-3f2964ffb931">
+				<Properties>
+					<Name>Capabilities</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Capabilities</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/capabilities</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8801b92e-2a72-4a19-9644-b209e5d27696">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>CapabilitiesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="773a64c7-88f0-4a94-ab13-92571ad4c7d4">
+				<Properties>
+					<Name>Query</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Query</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/query</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="0a8bc64a-fcfb-448c-aa22-b6b28984ed47">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>QueryPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c965eaf2-3305-4571-8f9f-e0f145d7b4d8">
+				<Properties>
+					<Name>Attributes</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Attributes</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/attributes</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8b9f0c98-4d4e-463f-ad3a-dcc58a9b38b3">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>AttributesPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="8ab1650c-ffbd-42e6-bec8-7b2029aafdc1">
+				<Properties>
+					<Name>ObjectData</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ObjectData</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/object-data</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="ee521b48-d8f5-419d-ac32-20fad72ed9ff">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ObjectDataPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="97e2a119-16be-4fd7-8a37-a74815e35856">
+				<Properties>
+					<Name>ObjectGet</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Object get</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/object/get</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="4820ef19-6714-4140-9dbb-6953541a0b04">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ObjectGetPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="15cf170b-1c26-4772-a3a7-d8ddc4884af6">
+				<Properties>
+					<Name>ObjectNew</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Object new</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/object/new</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="ae553297-c016-4a5d-8d21-a69a903b2d5c">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ObjectNewPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="48b62cda-78e1-4d6d-8dae-ac5a5efc8559">
+				<Properties>
+					<Name>ObjectWrite</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Object write</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/object/write</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1774e1e1-0328-497c-9622-e458ac6dbaf2">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ObjectWritePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="3ad44814-b56d-4a36-9407-c4f9532fb158">
+				<Properties>
+					<Name>ValueStorageGet</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение значения хранилища</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value storage get</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/value-storage/get</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="6492ed7e-0cfe-4d9b-8888-2cf3cdb28b23">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ValueStorageGetPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="e2617064-a734-4f2d-8a67-efcca0ea182a">
+				<Properties>
+					<Name>ProcedureExecute</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение процедуры</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Execute procedure</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/procedure/execute</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="014812b0-aecb-4fb7-b707-b715eb06b681">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ProcedureExecutePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="78648e8d-8982-418b-a1cd-7a6a1942497b">
+				<Properties>
+					<Name>Procedures</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список процедур</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Procedure list</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/v1/procedures</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="84381694-47ae-42bc-adc0-2034bdcdd29f">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ProceduresGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

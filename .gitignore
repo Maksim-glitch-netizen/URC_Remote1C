@@ -1,0 +1,15 @@
+# Publish only source files and release documentation.
+/*
+!/.gitignore
+!/README.md
+!/src/
+!/docs/
+!/URC_Remote1C.cfe
+!/URC_Remote1C_Руководство_технического_специалиста.docx
+/src/**
+!/src/**/
+!/src/**/*.xml
+!/src/**/*.bsl
+/docs/**
+!/docs/**/
+!/docs/**/*.md

@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Remote1C: настройки соединений</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Remote1C: connection settings</v8:content>
+		</v8:item>
+	</Title>
+	<Width>118</Width>
+	<Height>44</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="СохранитьНастройки" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьНастройки</CommandName>
+				<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ОбновитьНастройки" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьНастройки</CommandName>
+				<ExtendedTooltip name="ОбновитьНастройкиРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ПроверитьСоединение" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьСоединение</CommandName>
+				<ExtendedTooltip name="ПроверитьСоединениеРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="ПолучитьВозможности" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПолучитьВозможности</CommandName>
+				<ExtendedTooltip name="ПолучитьВозможностиРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ЭкспортироватьНастройки" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЭкспортироватьНастройки</CommandName>
+				<ExtendedTooltip name="ЭкспортироватьНастройкиРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ИмпортироватьНастройки" id="11">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИмпортироватьНастройки</CommandName>
+				<ExtendedTooltip name="ИмпортироватьНастройкиРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="УдалитьУзел" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьУзел</CommandName>
+				<ExtendedTooltip name="УдалитьУзелРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="Закрыть" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ОписаниеНастроек" id="17">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки являются общими для информационной базы и не зависят от текущего пользователя 1С.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Settings are shared for the infobase and do not depend on the current 1C user.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОписаниеНастроекКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ОписаниеНастроекРасширеннаяПодсказка" id="19"/>
+		</LabelDecoration>
+		<Table name="Узлы" id="20">
+			<Height>14</Height>
+			<DataPath>Узлы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УзлыКонтекстноеМеню" id="21"/>
+			<AutoCommandBar name="УзлыКоманднаяПанель" id="22"/>
+			<ExtendedTooltip name="УзлыРасширеннаяПодсказка" id="23"/>
+			<SearchStringAddition name="УзлыСтрокаПоиска" id="24">
+				<AdditionSource>
+					<Item>Узлы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УзлыСтрокаПоискаКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="УзлыСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УзлыСостояниеПросмотра" id="27">
+				<AdditionSource>
+					<Item>Узлы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УзлыСостояниеПросмотраКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="УзлыСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УзлыУправлениеПоиском" id="30">
+				<AdditionSource>
+					<Item>Узлы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УзлыУправлениеПоискомКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="УзлыУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">УзлыПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="УзлыConnectionCode" id="33">
+					<DataPath>Узлы.ConnectionCode</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код соединения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Connection code</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<ContextMenu name="УзлыConnectionCodeКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="УзлыConnectionCodeРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="УзлыNode" id="90">
+					<DataPath>Узлы.Node</DataPath>
+					<ContextMenu name="УзлыNodeКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="УзлыNodeРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="УзлыНаименование" id="36">
+					<DataPath>Узлы.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+					</Title>
+					<Width>18</Width>
+					<ContextMenu name="УзлыНаименованиеКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="УзлыНаименованиеРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="УзлыБазовыйURL" id="39">
+					<DataPath>Узлы.БазовыйURL</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>URL</v8:content>
+						</v8:item>
+					</Title>
+					<Width>28</Width>
+					<ContextMenu name="УзлыБазовыйURLКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="УзлыБазовыйURLРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<CheckBoxField name="УзлыАктивен" id="42">
+					<DataPath>Узлы.Активен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Enabled</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УзлыАктивенКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="УзлыАктивенРасширеннаяПодсказка" id="44"/>
+				</CheckBoxField>
+				<InputField name="УзлыРежимСериализации" id="45">
+					<DataPath>Узлы.РежимСериализации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Mode</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<ContextMenu name="УзлыРежимСериализацииКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="УзлыРежимСериализацииРасширеннаяПодсказка" id="47">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>portable заполняется автоматически; пустое значение означает portable. native-xdto — экспериментальный alpha-режим.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>portable is filled automatically; an empty value means portable. native-xdto is an experimental alpha mode.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<InputField name="УзлыТаймаутHTTP" id="48">
+					<DataPath>Узлы.ТаймаутHTTP</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таймаут, с</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Timeout, s</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<ContextMenu name="УзлыТаймаутHTTPКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="УзлыТаймаутHTTPРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="УзлыПользователь" id="51">
+					<DataPath>Узлы.Пользователь</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User</v8:content>
+						</v8:item>
+					</Title>
+					<Width>14</Width>
+					<ContextMenu name="УзлыПользовательКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="УзлыПользовательРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="УзлыСекрет" id="54">
+					<DataPath>Узлы.Секрет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Секрет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Secret</v8:content>
+						</v8:item>
+					</Title>
+					<Width>14</Width>
+					<PasswordMode>true</PasswordMode>
+					<ContextMenu name="УзлыСекретКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="УзлыСекретРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаЛокальныйУзел" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальный узел</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Local node</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаЛокальныйУзелРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛокальныеПараметры" id="59">
+					<ExtendedTooltip name="ГруппаЛокальныеПараметрыРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<InputField name="КодЛокальногоУзла" id="61">
+							<DataPath>КодЛокальногоУзла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код ServerNode</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ServerNode code</v8:content>
+								</v8:item>
+							</Title>
+							<Width>24</Width>
+							<ContextMenu name="КодЛокальногоУзлаКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="КодЛокальногоУзлаРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<CheckBoxField name="РазрешитьRemote1C" id="64">
+							<DataPath>РазрешитьRemote1C</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешить входящие вызовы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Allow incoming calls</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьRemote1CКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="РазрешитьRemote1CРасширеннаяПодсказка" id="66"/>
+						</CheckBoxField>
+						<CheckBoxField name="РазрешитьЗаписьОбъектов" id="81">
+							<DataPath>РазрешитьЗаписьОбъектов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешить запись объектов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Allow object writes</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьЗаписьОбъектовКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="РазрешитьЗаписьОбъектовРасширеннаяПодсказка" id="83">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Разрешение записи в этой базе. Права пользователя HTTP-сервиса на данные проверяются отдельно.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Allow writes in this infobase. HTTP service user permissions are checked separately.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</CheckBoxField>
+						<CheckBoxField name="СтрогийРежимЗаписи" id="84">
+							<DataPath>СтрогийРежимЗаписи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничивать запись списком типов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Restrict writes to listed types</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтрогийРежимЗаписиКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="СтрогийРежимЗаписиРасширеннаяПодсказка" id="86">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Включено: запись только типов из списка; пустой список запрещает все типы. Для записи всех типов включите разрешение записи и снимите этот флажок.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Enabled: writes are limited to the list; an empty list denies all types. To allow all types, enable writes and clear this checkbox.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</CheckBoxField>
+						<InputField name="РазрешенныеМетаданныеЗаписи" id="87">
+							<DataPath>РазрешенныеМетаданныеЗаписи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешённые типы объектов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Allowed object types</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазрешенныеМетаданныеЗаписиКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="РазрешенныеМетаданныеЗаписиРасширеннаяПодсказка" id="89">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Полные имена через запятую или точку с запятой: Справочник.Номенклатура; Документ.ЗаказКлиента. Поле может быть пустым: при включённом ограничении запись запрещена всем типам; при выключенном список не применяется.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Full names separated by commas or semicolons: Catalog.Products; Document.CustomerOrder. The field may be empty: an enabled restriction denies all types; a disabled restriction ignores the list.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ПояснениеВходящегоПользователя" id="67">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешение и локальный ServerNode должны быть настроены для пользователя 1С, под которым выполняются входящие HTTP-запросы.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The permission and local ServerNode must be configured for the 1C user that handles incoming HTTP requests.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеВходящегоПользователяКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПояснениеВходящегоПользователяРасширеннаяПодсказка" id="69"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИменованныеПроцедуры" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Именованные процедуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Named procedures</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаИменованныеПроцедурыРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<CheckBoxField name="РазрешитьВыполнениеПроцедур" id="95">
+					<DataPath>РазрешитьВыполнениеПроцедур</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешить выполнение процедур</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Allow procedure execution</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазрешитьВыполнениеПроцедурКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="РазрешитьВыполнениеПроцедурРасширеннаяПодсказка" id="97"/>
+				</CheckBoxField>
+				<Table name="ИменованныеПроцедуры" id="98">
+					<HeightInTableRows>6</HeightInTableRows>
+					<DataPath>ИменованныеПроцедуры</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ИменованныеПроцедурыКонтекстноеМеню" id="99"/>
+					<AutoCommandBar name="ИменованныеПроцедурыКоманднаяПанель" id="100"/>
+					<ExtendedTooltip name="ИменованныеПроцедурыРасширеннаяПодсказка" id="116"/>
+					<SearchStringAddition name="ИменованныеПроцедурыСтрокаПоиска" id="101">
+						<AdditionSource>
+							<Item>ИменованныеПроцедуры</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ИменованныеПроцедурыСтрокаПоискаКонтекстноеМеню" id="117"/>
+						<ExtendedTooltip name="ИменованныеПроцедурыСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ИменованныеПроцедурыСостояниеПросмотра" id="102">
+						<AdditionSource>
+							<Item>ИменованныеПроцедуры</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ИменованныеПроцедурыСостояниеПросмотраКонтекстноеМеню" id="119"/>
+						<ExtendedTooltip name="ИменованныеПроцедурыСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ИменованныеПроцедурыУправлениеПоиском" id="103">
+						<AdditionSource>
+							<Item>ИменованныеПроцедуры</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ИменованныеПроцедурыУправлениеПоискомКонтекстноеМеню" id="121"/>
+						<ExtendedTooltip name="ИменованныеПроцедурыУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ИменованныеПроцедурыИмя" id="104">
+							<DataPath>ИменованныеПроцедуры.Имя</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обработчик внешней базы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Name</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИменованныеПроцедурыИмяКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ИменованныеПроцедурыИмяРасширеннаяПодсказка" id="106"/>
+						</InputField>
+						<InputField name="ИменованныеПроцедурыОбработчик" id="107">
+							<DataPath>ИменованныеПроцедуры.Обработчик</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внутренний обработчик</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Handler</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИменованныеПроцедурыОбработчикКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ИменованныеПроцедурыОбработчикРасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<CheckBoxField name="ИменованныеПроцедурыРазрешена" id="110">
+							<DataPath>ИменованныеПроцедуры.Разрешена</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешена</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Enabled</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИменованныеПроцедурыРазрешенаКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ИменованныеПроцедурыРазрешенаРасширеннаяПодсказка" id="112"/>
+						</CheckBoxField>
+						<InputField name="ИменованныеПроцедурыОписание" id="113">
+							<DataPath>ИменованныеПроцедуры.Описание</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Description</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИменованныеПроцедурыОписаниеКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ИменованныеПроцедурыОписаниеРасширеннаяПодсказка" id="115"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИмпортЭкспорт" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт и экспорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import and export</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ГруппаИмпортЭкспортРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<LabelDecoration name="ПояснениеИмпортЭкспорт" id="72">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Секреты не экспортируются. При импорте существующие секреты узлов сохраняются.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Secrets are not exported. Existing node secrets are preserved during import.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеИмпортЭкспортКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПояснениеИмпортЭкспортРасширеннаяПодсказка" id="74"/>
+				</LabelDecoration>
+				<InputField name="ТекстИмпортаЭкспорта" id="75">
+					<DataPath>ТекстИмпортаЭкспорта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>XDTO JSON</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>XDTO JSON</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>7</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ТекстИмпортаЭкспортаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ТекстИмпортаЭкспортаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Результат" id="78">
+			<DataPath>Результат</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Result</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>5</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="79"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="80"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Узлы" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ConnectionCode" id="82">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Node" id="101">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="83">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="БазовыйURL" id="84">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Активен" id="85">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РежимСериализации" id="86">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТаймаутHTTP" id="87">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="88">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Секрет" id="89">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КодЛокальногоУзла" id="90">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код локального узла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьRemote1C" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить remote1 c</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстИмпортаЭкспорта" id="92">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст импорта экспорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьЗаписьОбъектов" id="94">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрогийРежимЗаписи" id="95">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешенныеМетаданныеЗаписи" id="96">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьВыполнениеПроцедур" id="102">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИменованныеПроцедуры" id="103">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обработчик" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Разрешена" id="3">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Описание" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройки" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СохранитьНастройкиОбработка</Action>
+		</Command>
+		<Command name="ОбновитьНастройки" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбновитьНастройкиОбработка</Action>
+		</Command>
+		<Command name="ПроверитьСоединение" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test connection</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьСоединениеОбработка</Action>
+		</Command>
+		<Command name="ПолучитьВозможности" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возможности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Capabilities</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПолучитьВозможностиОбработка</Action>
+		</Command>
+		<Command name="ЭкспортироватьНастройки" id="98">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт без секретов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export without secrets</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЭкспортироватьНастройкиОбработка</Action>
+		</Command>
+		<Command name="ИмпортироватьНастройки" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИмпортироватьНастройкиОбработка</Action>
+		</Command>
+		<Command name="УдалитьУзел" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить узел</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete node</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УдалитьУзелОбработка</Action>
+		</Command>
+	</Commands>
+</Form>

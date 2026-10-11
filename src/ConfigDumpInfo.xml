@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.20">
+	<ConfigVersions>
+		<Metadata name="CommonForm.URC_Диагностика" id="3bd3d7bd-3184-4392-ae21-15cfc16c8112" configVersion="bcd2848f7abc3b80469fa65eaadffef7496cf1ca"/>
+		<Metadata name="CommonForm.URC_Диагностика.Form" id="3bd3d7bd-3184-4392-ae21-15cfc16c8112.0" configVersion="9c6d36f697bb05271fc8bcf0978e90c48fbbcfc9"/>
+		<Metadata name="CommonForm.URC_НастройкиУзлов" id="c6d7fcf4-7652-4279-a8b4-1447f71b260c" configVersion="0fe3a70d6ad57b5a61b48fc54950d4ef68f1414a"/>
+		<Metadata name="CommonForm.URC_НастройкиУзлов.Form" id="c6d7fcf4-7652-4279-a8b4-1447f71b260c.0" configVersion="23866e3bccdd8eef08c4fd4c2863786314f560ca"/>
+		<Metadata name="CommonModule.URC_HTTPКлиент" id="6fac9f1d-d533-41a1-9916-31f15ea2fb39" configVersion="7daf56cdf087b67c8fd1741a315ee47ca691b682"/>
+		<Metadata name="CommonModule.URC_HTTPКлиент.Module" id="6fac9f1d-d533-41a1-9916-31f15ea2fb39.0" configVersion="4f6433859291d63417394cc99795341cb4a639ed"/>
+		<Metadata name="CommonModule.URC_HTTPСервер" id="249876bf-8cdf-4558-829c-78a7457585a6" configVersion="67823564c0dbf2a9f11f69e258bd6175f0839d72"/>
+		<Metadata name="CommonModule.URC_HTTPСервер.Module" id="249876bf-8cdf-4558-829c-78a7457585a6.0" configVersion="780713a62665b517aad6dd6879d590b9c6303ae5"/>
+		<Metadata name="CommonModule.URC_Безопасность" id="c8fd3bce-2da7-4da5-900a-04421702d79b" configVersion="6ecc56f87d59c06095d89fe2963321dfacd87a7b"/>
+		<Metadata name="CommonModule.URC_Безопасность.Module" id="c8fd3bce-2da7-4da5-900a-04421702d79b.0" configVersion="6bf4f46bb16e562e1bb2cc82c23050e0e08e3d8f"/>
+		<Metadata name="CommonModule.URC_ДанныеОбъекта" id="49e2337f-5733-40a5-9e5a-c4a0016ee924" configVersion="0571aa4466472a646679ccdc2534b15e0f5e89c2"/>
+		<Metadata name="CommonModule.URC_ДанныеОбъекта.Module" id="49e2337f-5733-40a5-9e5a-c4a0016ee924.0" configVersion="22fb2a61d962b866c3d835db4449716441034d0a"/>
+		<Metadata name="CommonModule.URC_Запросы" id="42dc914b-c44f-43b2-9967-a7804b74a6ce" configVersion="3e939225c294158b4442565ebf9edac1a3c7542c"/>
+		<Metadata name="CommonModule.URC_Запросы.Module" id="42dc914b-c44f-43b2-9967-a7804b74a6ce.0" configVersion="f539d1e49e085105e57bd4b6b883b5019f39e1d1"/>
+		<Metadata name="CommonModule.URC_Клиент" id="b7aaf974-d50b-459a-ba70-b28ad5335f70" configVersion="5395b4fdfc9bffdd7fce197abbc046e5a557f66a"/>
+		<Metadata name="CommonModule.URC_Клиент.Module" id="b7aaf974-d50b-459a-ba70-b28ad5335f70.0" configVersion="dd45234f0bf16c9e2feae576af903333f1130895"/>
+		<Metadata name="CommonModule.URC_Логирование" id="431e183f-28c6-4dc4-ae35-f3684d8b5eb4" configVersion="89f271f9f98d78e3d65cb6125a0e0cfa25e59b22"/>
+		<Metadata name="CommonModule.URC_Логирование.Module" id="431e183f-28c6-4dc4-ae35-f3684d8b5eb4.0" configVersion="7587838eded154420632e740ad2ee435640df48a"/>
+		<Metadata name="CommonModule.URC_Настройки" id="9d134c71-1063-4cf5-adf0-2554017c8bbe" configVersion="860382da3db9656565d6266100a246399b99134d"/>
+		<Metadata name="CommonModule.URC_Настройки.Module" id="9d134c71-1063-4cf5-adf0-2554017c8bbe.0" configVersion="731ae503f487c9b29c50b3ee1316218a69b08894"/>
+		<Metadata name="CommonModule.URC_ПортативныеТипы" id="f004a388-b03e-41b6-b2f6-b99aa6f38d9e" configVersion="bfad12450f47686d6b60eccc182c3a3e5f9774bf"/>
+		<Metadata name="CommonModule.URC_ПортативныеТипы.Module" id="f004a388-b03e-41b6-b2f6-b99aa6f38d9e.0" configVersion="3928fdb1b1eadefc6507256d50cb0428722acd48"/>
+		<Metadata name="CommonModule.URC_ПримерыИспользования" id="22ffe377-da37-426e-b095-93e2dedd4948" configVersion="49971eb1dde0253feeb7a74148407fd8029bd8b1"/>
+		<Metadata name="CommonModule.URC_ПримерыИспользования.Module" id="22ffe377-da37-426e-b095-93e2dedd4948.0" configVersion="ada07fa35bff28854da8384176b3345cd10da881"/>
+		<Metadata name="CommonModule.URC_Протокол" id="0b6cf6d4-9996-4c1d-9736-579d594ad295" configVersion="fac1ab31a2089e8150fedee775c92f743c3c5750"/>
+		<Metadata name="CommonModule.URC_Протокол.Module" id="0b6cf6d4-9996-4c1d-9736-579d594ad295.0" configVersion="97aa0beb353bdb85c2092c0084d26e18ba0ab04b"/>
+		<Metadata name="CommonModule.URC_Реквизиты" id="f370a643-4d19-42c9-a64c-c5a83a70acd2" configVersion="f94c704866221e6312540b0821058a685579a081"/>
+		<Metadata name="CommonModule.URC_Реквизиты.Module" id="f370a643-4d19-42c9-a64c-c5a83a70acd2.0" configVersion="aebb913dbcbe5fa5429440bde93b8ba870e5846d"/>
+		<Metadata name="CommonModule.URC_СериализацияXDTO" id="9b212d46-b4ff-4d9c-83b3-09dc1eb66e08" configVersion="07274230e1afb57f9877e8fc31a509ccbd279acd"/>
+		<Metadata name="CommonModule.URC_СериализацияXDTO.Module" id="9b212d46-b4ff-4d9c-83b3-09dc1eb66e08.0" configVersion="24a47666888404cc9aa17ec43dc999ae38975692"/>
+		<Metadata name="CommonModule.URC_УдаленныеПроцедуры" id="01ad174b-2396-4745-ac6a-adc4c3264f20" configVersion="fc90e36dc2f1b9557304beb161c95f011724dc03"/>
+		<Metadata name="CommonModule.URC_УдаленныеПроцедуры.Module" id="01ad174b-2396-4745-ac6a-adc4c3264f20.0" configVersion="c82e2db9dad50f2541e00388a1cf2f12f0c262cf"/>
+		<Metadata name="Configuration.URC_Remote1C" id="0e010a85-a1b3-4a0c-86f4-4e19bf7b2c0c" configVersion="0511606056846b6a6ad727c627b94364fb6b34be"/>
+		<Metadata name="HTTPService.URC_API" id="0970baf5-996a-46cb-b853-97aef7bfab6b" configVersion="d8e276c8429559d81bf2b7b01671de85b90cb403">
+			<Metadata name="HTTPService.URC_API.URLTemplate.ProcedureExecute.Method.POST" id="014812b0-aecb-4fb7-b707-b715eb06b681"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Query.Method.POST" id="0a8bc64a-fcfb-448c-aa22-b6b28984ed47"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectNew" id="15cf170b-1c26-4772-a3a7-d8ddc4884af6"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectWrite.Method.POST" id="1774e1e1-0328-497c-9622-e458ac6dbaf2"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ValueStorageGet" id="3ad44814-b56d-4a36-9407-c4f9532fb158"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Capabilities" id="47508e65-117f-46e9-bdca-3f2964ffb931"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectGet.Method.POST" id="4820ef19-6714-4140-9dbb-6953541a0b04"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectWrite" id="48b62cda-78e1-4d6d-8dae-ac5a5efc8559"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ValueStorageGet.Method.POST" id="6492ed7e-0cfe-4d9b-8888-2cf3cdb28b23"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Query" id="773a64c7-88f0-4a94-ab13-92571ad4c7d4"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Procedures" id="78648e8d-8982-418b-a1cd-7a6a1942497b"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Procedures.Method.GET" id="84381694-47ae-42bc-adc0-2034bdcdd29f"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Capabilities.Method.GET" id="8801b92e-2a72-4a19-9644-b209e5d27696"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectData" id="8ab1650c-ffbd-42e6-bec8-7b2029aafdc1"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Attributes.Method.POST" id="8b9f0c98-4d4e-463f-ad3a-dcc58a9b38b3"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectGet" id="97e2a119-16be-4fd7-8a37-a74815e35856"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Ping.Method.GET" id="9f1bfd3f-e942-449f-848f-9d249cd0738b"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectNew.Method.POST" id="ae553297-c016-4a5d-8d21-a69a903b2d5c"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Attributes" id="c965eaf2-3305-4571-8f9f-e0f145d7b4d8"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ProcedureExecute" id="e2617064-a734-4f2d-8a67-efcca0ea182a"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.ObjectData.Method.POST" id="ee521b48-d8f5-419d-ac32-20fad72ed9ff"/>
+			<Metadata name="HTTPService.URC_API.URLTemplate.Ping" id="f5eaff0a-83c7-4d75-a251-2edae91a5435"/>
+		</Metadata>
+		<Metadata name="HTTPService.URC_API.Module" id="0970baf5-996a-46cb-b853-97aef7bfab6b.0" configVersion="a988ddf8eb253088dc6e12554c5aa2452afa154f"/>
+		<Metadata name="Language.Русский" id="9f46eacf-dbc1-459b-8948-0e234dbf0a43" configVersion="a14304c824ebabe80f44ad1c8e31adf535c05adf"/>
+		<Metadata name="Role.URC_ОсновнаяРоль" id="5433cf55-54e7-4533-9990-5253b563f295" configVersion="bc1a2f699c139bc39a2ffd2e18f5b2bcaffec93e"/>
+		<Metadata name="Role.URC_ОсновнаяРоль.Rights" id="5433cf55-54e7-4533-9990-5253b563f295.0" configVersion="21d7b421355075c31f59b2d7a77b39086d471c8f"/>
+		<Metadata name="Subsystem.URC_Remote1C" id="257ed37c-ab94-4da4-adac-7be61fac68ab" configVersion="092659fe289937654d8ef46185d859528e167ef0"/>
+		<Metadata name="Subsystem.URC_Remote1C.CommandInterface" id="257ed37c-ab94-4da4-adac-7be61fac68ab.1" configVersion="290598c2597b96aadf288fefc6164e63cdf58ed0"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
