@@ -1,0 +1,23 @@
+name: "💡 Предложить улучшение"
+description: "Предложите новую возможность или изменение существующего поведения"
+title: "[Предложение]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу нужно решить?
+      description: "Опишите прикладной сценарий и текущие ограничения."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Предлагаемое решение
+      description: "Как вы видите нужное поведение или API?"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы и примеры
+      description: "Если есть, приложите обезличенные примеры BSL."
