@@ -1,0 +1,79 @@
+name: "🐛 Сообщить об ошибке"
+description: "Сообщите о проблеме в расширении URC_Remote1C"
+title: "[Ошибка]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение! Заполните форму — так будет проще воспроизвести и исправить ошибку.
+        **Не публикуйте** пароли, токены, URL с секретами, персональные данные и сведения из реальных баз.
+  - type: input
+    id: urc-version
+    attributes:
+      label: Версия URC_Remote1C
+      placeholder: "0.5.0"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Версия платформы 1С
+      placeholder: "8.3.27.2214"
+    validations:
+      required: true
+  - type: input
+    id: configuration
+    attributes:
+      label: Конфигурация 1С и версия
+      placeholder: "Например, Бухгалтерия предприятия 3.0..."
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: В какой операции возникает ошибка?
+      options:
+        - Подключение / Ping / Возможности
+        - Выполнение запроса
+        - Чтение объектов / реквизитов / табличных частей
+        - Создание / запись / проведение объектов
+        - ХранилищеЗначения
+        - Вызов зарегистрированной процедуры
+        - Настройки / диагностика / публикация HTTP
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести ошибку?
+      description: "Опишите последовательность действий; по возможности приложите минимальный фрагмент BSL."
+      placeholder: |
+        1. Настроить подключение...
+        2. Вызвать метод...
+        3. Получить ошибку...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Текст ошибки / логи / скриншоты
+      description: "Приложите сообщение об ошибке, RequestId и обезличенные фрагменты журналов, если есть."
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Безопасность данных
+      options:
+        - label: "Я убрал(а) из сообщения секреты, пароли и конфиденциальные данные."
+          required: true
