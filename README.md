@@ -8,6 +8,15 @@
 
 **Версия:** 0.5.0 · **Протокол:** Remote1C/1.0
 
+## Обратная связь
+
+- [Сообщить об ошибке](https://github.com/Maksim-glitch-netizen/URC_Remote1C/issues/new/choose) — выберите форму «Сообщить об ошибке», укажите версию 1С и шаги воспроизведения.
+- [Задать вопрос](https://github.com/Maksim-glitch-netizen/URC_Remote1C/issues/new/choose) — вопросы по установке, настройке и использованию API.
+- [Предложить улучшение](https://github.com/Maksim-glitch-netizen/URC_Remote1C/issues/new/choose) — идеи и новые сценарии применения.
+- [Все обращения и комментарии](https://github.com/Maksim-glitch-netizen/URC_Remote1C/issues) — открытые обсуждения ошибок, вопросов и предложений.
+
+Для обратной связи нужен аккаунт GitHub. Не размещайте в обращениях секреты, пароли и конфиденциальные данные.
+
 ## Возможности
 
 - Проверка соединения и возможностей удалённой базы.
